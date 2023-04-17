@@ -4,8 +4,7 @@ public class MinMaxMethods {
 
     public static void main(String[] args) {
 
-        double min;
-        double max;
+        // Get variables
         Scanner reader = new Scanner(System.in);
 
         System.out.print("Please enter your first number: ");
@@ -15,13 +14,16 @@ public class MinMaxMethods {
         System.out.print("Please enter your third number: ");
         double num3 = reader.nextDouble();
 
+        // Check which method versions to use (int or double)
         if(num1 % 1 == 0)
         {
+            // Call integer versions
             System.out.println("The smallest number is : " + min((int)num1, (int)num2, (int)num3));
             System.out.println("The largest number is : " + max((int)num1, (int)num2, (int)num3));
         }
         else
         {
+            // Call double versions
             System.out.println("The smallest number is : " + min(num1, num2, num3));
             System.out.println("The largest number is : " + max(num1, num2, num3));
         }
@@ -29,6 +31,7 @@ public class MinMaxMethods {
 
     }
 
+    // Create methods to find min
     public static int min(int x, int y, int z)
     {
         int min;
@@ -69,6 +72,7 @@ public class MinMaxMethods {
         return min;
     }
 
+    // Create methods to find max
     public static int max(int x, int y, int z)
     {
         int max;
